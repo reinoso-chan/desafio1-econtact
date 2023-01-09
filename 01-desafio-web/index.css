@@ -1,0 +1,222 @@
+:root {
+    --blue: rgb(33, 111, 177);
+    --cyan: rgb(44, 153, 163);
+    --grey: rgb(57, 57, 59);
+    --white: #ffffff;
+    --black: #000;
+}
+
+/* Challenge Heading CSS */
+.challenge__heading {
+    background-color: var(--blue);
+    padding: 5px 0px;
+    text-align: center;
+    width: 100%;
+    color: var(--white);
+    text-shadow: 3px 3px var(--grey);
+}
+
+/* Challenge Info CSS */
+.challenge__info {
+    background-color: var(--cyan);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.challenge__info > div {
+    width: 50%;
+    text-align: center;
+}
+
+.challenge__info_marker {
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.challenge__info > h1, .challenge__info > h2 {
+    color: var(--white);
+}
+
+.challenge__lowcost_image > img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Challenge LowCost CSS */
+.challenge__lowcost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px 30px;
+}
+
+.challenge__lowcost > div {
+    width: 40%;
+    text-align: justify;
+}
+
+.challenge__lowcost_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.challenge__lowcost_info > div:first-child {
+    color: var(--white);
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--grey);
+}
+
+/* Challenge Services CSS */
+
+.challenge__services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: 
+    "box1 box1 box1"
+    "box2 box3 box4";
+}
+
+
+.challenge__services__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border-radius: 10px;
+    height: 300px;
+    margin: 30px 30px;
+    text-align: center;
+    color: var(--white);
+}
+
+.box_1 {
+    grid-area: box1;
+    place-self: center;
+    text-align: center;
+}
+
+.box_1 > h1 {
+    color: var(--blue);
+}
+
+.box_1 > h3 {
+    color: var(--grey);
+}
+
+.box_2 {
+    grid-area: box2;
+    place-self: center;
+}
+
+.box_3 {
+    grid-area: box3;
+    place-self: center;
+}
+
+.box_4 {
+    grid-area: box4;
+    place-self: center;
+}
+
+
+/* Challenge Footer Css */ 
+.challenge__footer {
+    margin-top: 30px;
+    background-color: var(--blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    color: var(--white);
+}
+
+.challenge__footer > div {
+    place-self: center;
+}
+
+.challenge__footer > div.challenge__footer_contact_logo > img {
+    height: 100%;
+    width: 100%;
+}
+
+.challenge__footer_social_media > img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.challenge__footer_contact_info > h5 {
+    text-align: center;
+}
+
+/* Developed by */
+.developed_by {
+    background-color: var(--grey);
+    text-align: center;
+    color: var(--white);
+}
+
+.developed_by > p {
+    margin: 0;
+}
+
+/* Buttons */
+button {
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    height: 30px;
+    padding: 5px 0;
+    text-align: center;
+    width: 100px;
+    border: 0px;
+}
+
+/* Solid border */
+hr.solid {
+    border-top: 3px solid #bbb;
+    width: 85vw;
+}
+
+
+@media (max-width: 500px) {
+
+    .challenge__services {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "box1 box1 box1"
+            "box2 box2 box2"
+            "box3 box3 box3"
+            "box4 box4 box4";
+    }
+
+    
+    /* Challenge Footer Css */ 
+    .challenge__footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .challenge__lowcost {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .challenge__lowcost > div {
+        width: 100%;
+    }
+
+
+}
